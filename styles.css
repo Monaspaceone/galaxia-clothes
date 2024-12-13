@@ -5,17 +5,7 @@
     list-style: none; 
 
 }
-
-.header {
-    display: flex; /* Usa flexbox para la disposición */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    background-color: #FFA07A; /* Naranja claro */
-    padding: 10px 20px; /* Espaciado interno */
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-}
-
+/*HEADER */
 .header-left, .header-center, .header-right {
     display: flex; /* Flexbox para estos contenedores */
     align-items: center; /* Centra verticalmente el contenido */
@@ -51,6 +41,90 @@ header .header__nav--vinculos a {
     color: #ff6f6f; /* Rojo suave al pasar el cursor */
 }
 
+
+/* Estilo base para la cabecera */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    background-color: #FFA07A; /* Naranja claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+/* Centrar el logo y dejarlo fijo */
+
+.header-center h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Ocultar el menú desplegable por defecto */
+.menu-desplegable {
+    display: none;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-desplegable ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-desplegable ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-hamburguesa i {
+    font-size: 30px;
+    color: #333;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .header-left, .header-right {
+        display: none; /* Oculta los elementos de la izquierda y derecha */
+    }
+
+    .header-center {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    /* Mostrar el ícono de menú hamburguesa */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* Mostrar el menú cuando el usuario haga clic en el hamburguesa */
+    .menu-desplegable {
+        display: block;
+        position: absolute;
+        top: 60px; /* Puedes ajustar esta posición */
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
 
 /*Carrusel imagenes*/
 
