@@ -54,9 +54,30 @@ header .header__nav--vinculos a {
 
 /*Carrusel imagenes*/
 
-.carousel-item img {
-    width:250px ;
-    height: 250px ;
+.carousel-inner img {
+    margin-top: 20px;
+    max-height: 300px !important;
+    max-width:600px;
+    object-fit: cover !important;
+  }
+
+/* Estilos para los botones del carrusel */
+.carousel-control-prev, 
+.carousel-control-next {
+  font-size: 30px;  /* Aumenta el tamaño del ícono */
+  background-color: rgba(0, 0, 0, 0.5);  /* Fondo semitransparente */
+  border-radius: 50%;  /* Hace los botones redondeados */
+  width: 50px;  /* Aumenta el tamaño de los botones */
+  height: 50px;
+  color: white;  /* Color del ícono */
+  opacity: 1;  /* Asegura que el botón sea completamente visible */
+  margin: auto  20px;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);  /* Fondo más oscuro al hacer hover */
+  transform: scale(1.1);  /* Aumenta el tamaño al pasar el mouse */
 }
 
 
