@@ -20,7 +20,20 @@
     text-decoration: none; /* Quita el subrayado */
 }
 
-
+.header-left a {
+    color: #444; /* Color gris oscuro para el texto */
+    font-weight: 600; /* Texto ligeramente más grueso */
+    text-decoration: none; /* Quitar el subrayado */
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    margin-left: 15px; /* Espaciado entre enlaces */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  /* Estilo hover para dar interactividad */
+  .header-left a:hover {
+    color: #FF6F6F; /* Cambiar a un tono rojizo suave al pasar el mouse */
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+  }
 .header-center h1 {
     margin: 0; /* Elimina el margen del h1 */
     font-size: 24px; /* Ajusta el tamaño de la fuente según tu preferencia */
@@ -87,20 +100,11 @@ header .header__nav--vinculos a {
     font-size: 1.2rem;
 }
 
-/* Estilos para el menú hamburguesa */
-.menu-hamburguesa {
-    display: none;
-    cursor: pointer;
-}
 
-.menu-hamburguesa i {
-    font-size: 30px;
-    color: #333;
-}
 
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 768px) {
-    .header-left, .header-right {
+    .header-left{
         display: none; /* Oculta los elementos de la izquierda y derecha */
     }
 
@@ -109,21 +113,7 @@ header .header__nav--vinculos a {
         text-align: center;
     }
 
-    /* Mostrar el ícono de menú hamburguesa */
-    .menu-hamburguesa {
-        display: block;
-    }
-
-    /* Mostrar el menú cuando el usuario haga clic en el hamburguesa */
-    .menu-desplegable {
-        display: block;
-        position: absolute;
-        top: 60px; /* Puedes ajustar esta posición */
-        right: 0;
-        background-color: #fff;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+  
 }
 
 /*Carrusel imagenes*/
@@ -154,6 +144,175 @@ header .header__nav--vinculos a {
   transform: scale(1.1);  /* Aumenta el tamaño al pasar el mouse */
 }
 
+/*boton comprar en el index*/
+
+#botonComprar {
+    background-color: #ff6f6f; /* Color base */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease; /* Transición suave para hover */
+  }
+  
+  #botonComprar:hover {
+    background-color: #FF7F50; /* Color más intenso al pasar el mouse */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  }
+  
+  #botonComprar:active {
+    background-color: #E76E3C; /* Color más oscuro al hacer clic */
+    transform: scale(0.98); /* Disminuye ligeramente el tamaño */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); /* Sombra reducida */
+  }
+  /* Estilos generales para los botones */
+.header-right button {
+
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cambiar cursor al pasar */
+    margin-right: 10px; /* Separación entre botones */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease; /* Transición suave */
+  }
+  
+  /* Botón Pagar */
+  #botonPagar {
+    background-color:  #ff6f6f; /* Verde claro */
+  }
+  
+  #botonPagar:hover {
+    background-color: #b32453; /* Verde un poco más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+
+  
+  /* Botón Borrar */
+  #botonBorrar {
+    background-color: #FFB6C1; /* Rosa claro */
+  }
+  
+  #botonBorrar:hover {
+    background-color: #FF8CA1; /* Rosa más intenso al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  #botonBorrar:active {
+    background-color: #E5788C; /* Rosa oscuro al hacer clic */
+    transform: scale(0.98); /* Reduce ligeramente el tamaño */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
+  }
+  
+
+/*container*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho, estandard */
+    grid-gap: 10px; /* gap between grid items */
+  }
+  
+  .item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  border:2px #FFFFFF dotted;
+  }
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantalla de tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 columna en pantallas mas chicas */
+  }
+}
+
+
+#detalle {
+    background-color: #fffaf0; /* Fondo claro para el resumen */
+    border: 1px solid #FFB6C1; /* Borde rosa */
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el botón de confirmar compra */
+#botonEnviar {
+    background-color: #FFB6C1; /* Rosa claro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#botonEnviar:hover {
+    background-color: #FF6F6F; /* Rosa más fuerte */
+    transform: scale(1.05); /* Agranda un poco */
+}
+
+/* Estilo para el botón de volver */
+.botonVolver {
+    background-color:  #eec0cf; /* Verde menta claro */
+    margin-bottom: 40px;
+    margin-left: 600px;
+    color: #444;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botonVolver:hover {
+    background-color: #cfabc1; /* Verde menta más oscuro */
+    transform: scale(1.05);
+}
+
+form {
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
 /* Locales*/
 

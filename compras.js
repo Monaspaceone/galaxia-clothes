@@ -35,7 +35,7 @@ function agregarProducto(producto, precio){
         document.getElementById("carrito").innerHTML="";
         document.getElementById("botonPagar").textContent= "Pagar";
 
-        //limpia los datos de session
+        //limpia los datos de local
         localStorage.removeItem('productos');
         localStorage.removeItem('total');
     }
