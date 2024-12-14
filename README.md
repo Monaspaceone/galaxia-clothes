@@ -14,6 +14,7 @@ Estilos con CSS y Bootstrap: Las imágenes y elementos de la página han sido es
 Header y Footer Dinámicos: Para optimizar el código, el header y el footer se han implementado mediante JavaScript, permitiendo que estos elementos se generen dinámicamente y reduciendo así la repetición de código en los archivos HTML.
 
 LocalSession: Los productos seleccionados suman sus importes de manera local para luego realizar la compra de los mismos.
-IMPORTANTE!!!! La pagina que utilice para generar los importes es la INDEX.HTML. Las demas son para apreciar los vinculos dentro de la pagina. Y el uso de header y footer por medio de javascript manipulando el dom.
+
+Formspree:  el metodo para recabar la informacion del comprador fue a traves de la app formspree que recibe la informacion.
 
 Git Hub\ Git: trabaje con Git para sunir el codigo e hice commits con las modificaciones que le iba realizando al codigo.
